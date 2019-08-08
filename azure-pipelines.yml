@@ -22,7 +22,7 @@ steps:
 - script: |
     docker build -f Dockerfile -t ankii123/$(imageName) .
     docker login -u ankii123 -p Docker@123
-    docker push $(dockerId)/$(imageName)
+    docker push ankii123/$(imageName)
   displayName: 'Pushing Image'
 
 # - task: DotNetCoreCLI@2
