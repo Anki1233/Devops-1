@@ -20,8 +20,8 @@ steps:
     arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
 
 - script: |
-    docker build -f Dockerfile -t $(dockerId)/$(imageName) .
-    docker login -u $(dockerId) -p $(pswd)
+    docker build -f Dockerfile -t ankii123/$(imageName) .
+    docker login -u ankii123 -p Docker@123
     docker push $(dockerId)/$(imageName)
   displayName: 'Pushing Image'
 
