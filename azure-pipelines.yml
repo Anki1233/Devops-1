@@ -23,7 +23,7 @@ steps:
     docker build -f Dockerfile -t ankii123/$(imageName) .
     docker login -u ankii123 -p Docker@123
     docker push ankii123/$(imageName)
-  displayName: 'Pushing Image'
+  displayName: 'Pushing an Image'
 
 # - task: DotNetCoreCLI@2
 #   displayName: 'dotnet publish $(buildConfiguration)'
