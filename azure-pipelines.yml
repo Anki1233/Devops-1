@@ -19,6 +19,14 @@ steps:
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
 
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      echo 'Hello world'
+
 - script: |
     docker build -f Dockerfile -t ankii123/$(imageName) .
     docker login -u ankii123 -p Docker@123
